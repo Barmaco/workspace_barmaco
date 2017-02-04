@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>360</x>
+      <y>60</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CVideoPlayerView_Sink
+--
+oOpenView() = 0;
+oCloseView() = 0;
+onSize(int w, int h) = 0;
+onVideoData(const char * data, int size) = 0;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>350</y>
+      <w>350</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MediaStreams
+typedef map&lt;string,MediaInfo *&gt; action_streams_
+typedef map&lt;string,MediaInfo *&gt; id_streams_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>250</y>
+      <w>220</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>MediaInfo 流媒体模型
+string		uid_;
+	string		stream_json_;
+	string      stream_id_;
+	string      action_;
+	string      media_;
+	string      protocol_;
+	bool        is_audio_;
+	bool        is_video_;
+	bool        is_remote_pc_;
+	bool        is_remote_android_;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>380</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>160</x>
+      <y>210</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IMedia_Prvd_Sink
+--
+媒体指令处理接口
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>350</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Media_Provider
+媒体中心，处理音频和视频
+MediaStreams media_streams_;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>230</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>390</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1180</x>
+      <y>220</y>
+      <w>340</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>IPduExecuter
+--
+on_connect_confirm()
+on_disconnect()
+sync_dispatch_message(IWsCommandPdu * pdu)
+async_dispatch_message(IWsCommandPdu * pdu)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1340</x>
+      <y>240</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1300</x>
+      <y>400</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1500</x>
+      <y>0</y>
+      <w>520</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>IReceiver_Sink
+--
+get_priority(IWsCommandPdu * pdu) = 0;
+on_connect_confirm(IWS_Connection * conn) = 0;
+on_disconnect(IWS_Connection * conn) = 0;
+sync_dispatch_message(IWS_Connection * conn, IWsCommandPdu * pdu) = 0;
+async_dispatch_message(IWS_Connection * conn, IWsCommandPdu * pdu) = 0;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1580</x>
+      <y>210</y>
+      <w>350</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>CBasePduReceiver
+ListPduExecuter		lst_executer_;
+add_executer(IPduExecuter * executer);
+remove_executer(IPduExecuter * executer);
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1750</x>
+      <y>20</y>
+      <w>30</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1580</x>
+      <y>380</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>CMeetPduReceiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1650</x>
+      <y>330</y>
+      <w>80</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1790</x>
+      <y>380</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>CMircoPduReceiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1830</x>
+      <y>330</y>
+      <w>60</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1350</x>
+      <y>230</y>
+      <w>250</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>560</x>
+      <y>200</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IWS_Connection_Sink
+--
+Operation1
+Operation2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>940</x>
+      <y>0</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IWS_Connection
+--
+Operation1
+Operation2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>180</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>CWsConnection
+thread_run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>20</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>210</y>
+      <w>310</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>900</x>
+      <y>400</y>
+      <w>280</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>IReceiverMsg_Sink
+--
+onReceiveMsg(const string &amp; msgId) = 0;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>530</y>
+      <w>330</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>BaseConnHandler
+CAutoRef&lt;IWS_Connection &gt;		connection_;
+CAutoRef&lt;WS_Connection_Sink &gt;	conn_sink_;
+CBasePduReceiver *      pdu_receiver_;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1030</x>
+      <y>420</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>290</y>
+      <w>400</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;330.0;10.0;330.0;300.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1590</x>
+      <y>600</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>IWsCommandPdu
+--
+指令类接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>440</y>
+      <w>510</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>WS_Connection_Sink
+IReceiver_Sink *        recv_sink_;
+	IReceiverMsg_Sink *     recv_msg_sink_;
+	ISubcribeCallBack *     subs_callback_;
+	BaseConnHandler *		handler_;
+总的消息入口	
+on_dispatch_message(IWS_Connection * conn, IWsCommandPdu * pdu) 	</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>220</y>
+      <w>30</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>560</y>
+      <w>330</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0;310.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>70</y>
+      <w>360</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>CMircoDirector
+IWS_Connection_Sink *	conn_sink_;
+	CChatProvider *			char_prvd_;
+	CSessionManager *		session_mgr_;
+	SocketChannelHandler *  sck_channel_handler_;
+	CPduDispatchHandler *   pdu_dispatcher_;
+	RTMP_Provider *         rtmp_prvd_;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>280</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CChatProvider
+string					mMediaSvcIP;
+IChatReceiver_Sink *	mReceiver_Sink;
+	UserInfo *              mTeacher;
+	UserInfo *              mLoginUser;
+	CMeetUsers              mChatUsers;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>210</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>650</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>MircoConnHandler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>650</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>MeetConnHandler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>610</y>
+      <w>60</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>610</y>
+      <w>70</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1560</x>
+      <y>720</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>CWsCommandPdu
+指令类
+map&lt;int, string&gt; MapParams;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1650</x>
+      <y>620</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1790</x>
+      <y>620</y>
+      <w>410</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CWsCommandCoder
+解析指令的类
+IWsCommandPdu* parseCommand(const string &amp; content)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1430</x>
+      <y>840</y>
+      <w>480</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>TimeHandler
+typedef vector&lt;PendingRunnable * &gt; ListPendTask m_PendTasks;</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
