@@ -1,0 +1,5 @@
+1、在频繁不停的存取中用deque代替vector
+   eg:	rtmp	rtmp_video.h	typedef deque<RGBItem * > LstRGBItem;
+   
+2、c++内存释放崩溃，多考虑释放了无效内存，多方引用了这个内存，导致多次释放，或者多线程去释放
+   可在创建释放的时候，打印下线程id，观察
