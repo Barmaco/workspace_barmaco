@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<object ClientVersion="4">
+    <FileInfo FileRelativePath="FileFolder/fuc.txt" FileSize="108" LastUpdateTime="Mon May 09 14:48:12 2016&#x0A;" Version="3" echange="3" m_bdir="0" />
+    <FileInfo FileRelativePath="FileFolder/hello/1.txt" FileSize="8" LastUpdateTime="Mon May 09 14:48:12 2016&#x0A;" Version="2" echange="3" m_bdir="0" />
+    <FileInfo FileRelativePath="FileFolder/hello" FileSize="0" LastUpdateTime="Mon May 09 14:42:21 2016&#x0A;" Version="0" echange="3" m_bdir="1" />
+</object>
