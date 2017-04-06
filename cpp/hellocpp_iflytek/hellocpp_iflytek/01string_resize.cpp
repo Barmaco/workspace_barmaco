@@ -33,5 +33,11 @@ int main()
 		a = -1;
 	}
 
+
+	std::string s = "aa~$谷黄山二日游 - 副本.doc";
+	int num = s.find("~$");
+
+	num = s.find("doc");
+
 	return 0;
 }
