@@ -1,0 +1,29 @@
+1、\\10.4.30.167\共享文件夹\空中课堂PC端 		test test
+	测试远程服务器：112.29.172.140:2289 帐号：bbAdministrator 密码：ebadu@2016
+	
+2、	dui xml 可拖动范围：		<Window size="574,442" roundcorner="5,5" caption="0,0,0,42">
+	屏蔽控件enter等按键消息：	keyboard="false"
+	
+3、时间：	time_t curr_tm = 0; 
+			time(&curr_tm);
+			if (curr_tm - m_lastsendjstime > 1)
+	
+4、cef remote debugging :
+
+	重加载：	location.reload()
+	长度：		this.options.answers.length
+				this.$("span.active")
+			
+5、jQuery：	
+	$(this).hide() - 隐藏当前元素
+	$("p").hide() - 隐藏所有 <p> 元素
+	$("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素
+	$("#test").hide() - 隐藏所有 id="test" 的元素
+	$(".intro")	class="intro" 的所有元素
+	
+	js查找html元素赋值： document.getElementById("sourceContainerhHeader").innerHTML		
+	
+	设置按钮不可用：$itemBox.find(".btn-toggle[data-stuid='" + ids[i] + "']").addClass('disabled');
+					'click .btn-toggle:not(.disabled)': 'toggleSelect'
+
+	设置或移除被选元素的一个或多个类进行切换： $("p").toggleClass("main");
