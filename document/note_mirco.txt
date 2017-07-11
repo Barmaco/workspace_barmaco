@@ -7,12 +7,21 @@
 3、时间：	time_t curr_tm = 0; 
 			time(&curr_tm);
 			if (curr_tm - m_lastsendjstime > 1)
+			
+			//getCurrentTime
+			long long curtime = TimeHandler::getCurrentTime();
+			
+			//str -> long long
+			long long systemtime;  
+			std::istringstream is("1493345163328");
+			is >> systemtime;			
 	
 4、cef remote debugging :
 
 	重加载：	location.reload()
 	长度：		this.options.answers.length
 				this.$("span.active")
+							
 			
 5、jQuery：	
 	$(this).hide() - 隐藏当前元素
@@ -22,8 +31,53 @@
 	$(".intro")	class="intro" 的所有元素
 	
 	js查找html元素赋值： document.getElementById("sourceContainerhHeader").innerHTML		
+						 document.getElementById("report_dialog").style.display != 'none'
 	
 	设置按钮不可用：$itemBox.find(".btn-toggle[data-stuid='" + ids[i] + "']").addClass('disabled');
 					'click .btn-toggle:not(.disabled)': 'toggleSelect'
-
+	
+	<a class="narrow-button narrowBtn" z-index: 9999;"></a>
+	
 	设置或移除被选元素的一个或多个类进行切换： $("p").toggleClass("main");
+	
+	获取window窗体的内部宽度：	window.innerWidth
+								window.innerHeight
+	整个页面滚动的像素值：		window.pageXOffset
+								window.pageYOffset
+								
+	滚动条隐藏：				<body topmargin="0px" leftmargin="0px" style="height: 100%;overflow-x: hidden;" >
+	
+	collections remove:			$item.remove();
+								self.collections.remove(item);
+	
+	toast：						utils.toastTip({
+									content: '您在该上课时间已有课程，确认要开课吗？',
+									time: 500,
+									delay: 500,
+									callback: function () {
+										self.$(".save-action,.cancel-action").addClass("enabled");
+										self.$(".filter-masker").hide();
+									}
+								});
+								
+	设置左上角坐标：			my_img_picscreen.css("top", '200px');
+								my_img_picscreen.css("left", '200px');
+
+	数组的操作：	this.materialInfo = new Array();
+					this.materialInfo.splice(1, 2)		从下标1处开始删除两个元素
+	
+	移除所有class是这个的元素： $(".item-course").remove()
+	
+	<% if(item.materialname != ''){ %>
+				<% if(item.materialname.indexOf('[{') == -1){ %>
+				<a href="#" class="material-item preview-action" data-url="<%= item.lessonurl %>"><i class="icon icon-ppt mr5"></i><%= item.materialname %></a>
+				<% }else{ %>
+		            <% for(var i = 0, materials = JSON.parse(item.materialname), lessonurls = JSON.parse(item.lessonurl); i < materials.length; i++){ %>
+					<a href="#" class="material-item preview-action"  data-name="<%= materials[i].materialname %>" data-url="<%= lessonurls[i].lessonurl %>"><i class="icon icon-ppt mr5"></i><%= materials[i].materialname %></a>
+		            <% } %>
+				<% } %>
+			<% } %>
+6、 android端：
+	FutureMeetHelper.onEventMainThread
+	MeetReceiver.dispatchMsg
+	
