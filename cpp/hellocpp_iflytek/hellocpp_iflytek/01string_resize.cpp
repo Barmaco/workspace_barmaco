@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-int main()
+int main01()
 {
 	//1 string内存分配按照:(n*16-1)分配，n好像是次数
 	std::string str1 = "hello";

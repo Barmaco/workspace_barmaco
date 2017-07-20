@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A369C398-B8C7-40C4-BE48-0334843E7FB3}</ProjectGuid>
+    <ProjectGuid>{428D9216-F59E-4165-9AEB-48FDE9DFA0C7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>hellocpp_iflytek</RootNamespace>
+    <RootNamespace>study_muduo</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -78,9 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01string_resize.cpp" />
-    <ClCompile Include="02大端小端.cpp" />
-    <ClCompile Include="03const.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
