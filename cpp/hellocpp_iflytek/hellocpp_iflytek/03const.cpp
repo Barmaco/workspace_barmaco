@@ -2,7 +2,7 @@
 
 //http://www.cnblogs.com/wintergrass/archive/2011/04/15/2015020.html
 
-void main()
+void main03()
 {
 	/**
 	int a;		//a is an integer

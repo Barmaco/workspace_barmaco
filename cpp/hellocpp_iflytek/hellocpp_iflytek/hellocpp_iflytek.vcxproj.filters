@@ -20,5 +20,11 @@
     <ClCompile Include="03const.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="04auto_ptr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="05_shared_ptr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

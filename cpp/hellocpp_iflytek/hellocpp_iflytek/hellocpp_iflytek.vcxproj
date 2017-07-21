@@ -81,6 +81,8 @@
     <ClCompile Include="01string_resize.cpp" />
     <ClCompile Include="02大端小端.cpp" />
     <ClCompile Include="03const.cpp" />
+    <ClCompile Include="04auto_ptr.cpp" />
+    <ClCompile Include="05_shared_ptr.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
