@@ -24,7 +24,7 @@ public:
 	std::shared_ptr<Child> child;
 };
 
-void main() 
+void main05() 
 {
 	Child* childptr = new Child;
 	Parent* parentptr = new Parent;

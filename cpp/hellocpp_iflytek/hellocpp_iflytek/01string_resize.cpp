@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-int main01()
+int main()
 {
 	//1 string内存分配按照:(n*16-1)分配，n好像是次数
 	std::string str1 = "hello";
@@ -38,6 +38,10 @@ int main01()
 	int num = s.find("~$");
 
 	num = s.find("doc");
+
+	//
+	std::string a811 = "0.0.1.png";
+	num = a811.find("0");
 
 	return 0;
 }
